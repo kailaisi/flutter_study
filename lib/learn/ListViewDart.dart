@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import '../res/listData.dart';
 
 //最基本的列表
 class ListViewContent extends StatelessWidget {
@@ -80,5 +81,56 @@ class ListViewImage extends StatelessWidget {
           padding: EdgeInsets.all(10),
           scrollDirection: Axis.horizontal,
         ));
+  }
+}
+
+//动态列表
+class ListViewDy extends StatelessWidget {
+  //自定义方法
+  List<Widget> _getData() {
+    var tempList = listData.map((e) {
+      var img =
+          "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3980237351,3514590672&fm=26&gp=0.jpg";
+      if (e["img"] != null) {
+        img = e["img"];
+      }
+      return ListTile(
+        title: Text(e["name"]),
+        subtitle: Text(e["id"]),
+        leading: Image.network(img),
+      );
+    });
+    return tempList.toList();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      children: this._getData(),
+    );
+  }
+}
+
+//动态列表
+class ListViewDy2 extends StatelessWidget {
+  Widget _getListWidget(context, index) {
+    var e = listData[index];
+    var img =
+        "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3980237351,3514590672&fm=26&gp=0.jpg";
+    if (e["img"] != null) {
+      img = e["img"];
+    }
+    return ListTile(
+      title: Text(e["name"]),
+      subtitle: Text(e["id"]),
+      leading: Image.network(img),
+      trailing: Image.network(img),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(
+        itemCount: listData.length, itemBuilder: this._getListWidget);
   }
 }

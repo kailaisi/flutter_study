@@ -1,5 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_info/ListViewDart.dart';
+import 'package:flutter_info/learn/ListViewDart.dart';
+import 'package:flutter_info/learn/Card.dart';
+import 'learn/gridViewDart.dart';
+import 'learn/RowDart.dart';
+import 'package:flutter_info/Check.dart';
+import 'learn/StackDart.dart';
+import 'learn/Wrap.dart';
+import 'learn/statefull/AddList.dart';
+import 'learn/statefull/pages/BottomBar.dart';
+import 'learn/statefull/Demo1.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,13 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Flutter Demo'),
-        ),
-        body: ListViewImage(),
-      ),
-      theme: ThemeData(primarySwatch: Colors.yellow),
+      home: TabWidget(),
     );
   }
 }
