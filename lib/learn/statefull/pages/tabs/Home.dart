@@ -26,6 +26,21 @@ class _HomePageState extends State<HomePage> {
           SizedBox(
             height: 30,
           ),
+          RaisedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/search');
+            },
+            child: Text("命名路由跳转"),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          RaisedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/product');
+            },
+            child: Text("商品详情"),
+          ),
         ]);
   }
 }

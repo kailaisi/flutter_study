@@ -3,19 +3,22 @@ import 'package:flutter_info/res/listData.dart';
 
 //表单页面
 class FormPage extends StatefulWidget {
-  FormPage({Key key}) : super(key: key);
+  final arguments;
+  FormPage({this.arguments});
 
   @override
-  _FormPageState createState() => _FormPageState();
+  _FormPageState createState() => _FormPageState(arguments);
 }
 
 class _FormPageState extends State<FormPage> {
+  final arguments;
+  _FormPageState(this.arguments);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("表单页面"),
-        leading: Icon(Icons.arrow_back_rounded),
+        title: Text(arguments["title"]),
       ),
       body: ListView(
           children: listData.map((e) {
@@ -28,6 +31,12 @@ class _FormPageState extends State<FormPage> {
           ),
         );
       }).toList()),
+      floatingActionButton: FloatingActionButton(
+        child: Text("更多"),
+        onPressed: () {
+          Navigator.of(context).pop();
+        },
+      ),
     );
   }
 }

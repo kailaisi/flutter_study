@@ -17,10 +17,21 @@ class _CategoryPageState extends State<CategoryPage> {
       children: [
         RaisedButton(
           onPressed: () {
-            Navigator.of(context)
-                .push(MaterialPageRoute(builder: (context) => FormPage()));
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) =>
+                    FormPage(arguments: {"title": "路由命名跳转"})));
           },
           child: Text("跳转到表单页面"),
+        ),
+        SizedBox(
+          height: 30,
+        ),
+        RaisedButton(
+          onPressed: () {
+            Navigator.pushNamed(context, '/form',
+                arguments: {"title": "我是路由命名跳转"});
+          },
+          child: Text("命名路由跳转"),
         ),
       ],
     );
