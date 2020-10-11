@@ -1,9 +1,10 @@
 import 'package:flutter_info/learn/statefull/pages/AppBarDemo.dart';
 import 'package:flutter_info/learn/statefull/pages/BottomBar.dart';
 import 'package:flutter_info/learn/statefull/pages/From.dart';
-import 'package:flutter_info/learn/statefull/pages/Product.dart';
-import 'package:flutter_info/learn/statefull/pages/ProductDetail.dart';
-import 'package:flutter_info/learn/statefull/pages/Search.dart';
+import 'package:flutter_info/learn/statefull/pages/TabBarController.dart';
+import 'package:flutter_info/learn/statefull/pages/second/Product.dart';
+import 'package:flutter_info/learn/statefull/pages/second/ProductDetail.dart';
+import 'package:flutter_info/learn/statefull/pages/second/Search.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_info/learn/statefull/pages/user/Login.dart';
 import 'package:flutter_info/learn/statefull/pages/user/RegisterFirst.dart';
@@ -22,6 +23,7 @@ final routers = {
   '/registerSecond': (context) => RegisterSecondPage(),
   '/registerThird': (context) => RegisterThirdPage(),
   '/appbarDemo': (context) => AppBarDemoPage(),
+  '/tabBarController': (context) => TabBarControllerPage(),
 };
 
 //统一的路由传参跳转处理

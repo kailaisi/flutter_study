@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_info/learn/statefull/pages/Search.dart';
+import 'package:flutter_info/learn/statefull/pages/second/Search.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key}) : super(key: key);
@@ -40,6 +40,15 @@ class _HomePageState extends State<HomePage> {
               Navigator.pushNamed(context, '/product');
             },
             child: Text("商品详情"),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          RaisedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/tabBarController');
+            },
+            child: Text("Tab自定义顶部Tab模块"),
           ),
         ]);
   }

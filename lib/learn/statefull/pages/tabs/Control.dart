@@ -14,25 +14,27 @@ class _ControlPageState extends State<ControlPage> {
         length: 2,
         child: Scaffold(
           appBar: AppBar(
-            title: Text("AppBarDemo"),
-            centerTitle: true,
-            backgroundColor: Colors.blueAccent,
-            actions: [
-              IconButton(
-                icon: Icon(Icons.search),
-                onPressed: () {
-                  print("search");
-                },
-              ),
-            ],
-            bottom: TabBar(tabs: [
-              Tab(
-                text: "热门",
-              ),
-              Tab(
-                text: "推荐",
-              )
-            ]),
+            backgroundColor: Colors.grey,
+            title: Row(
+              children: [
+                Expanded(
+                  child: TabBar(
+                      isScrollable: true,
+                      indicatorColor: Colors.red,
+                      labelColor: Colors.red,
+                      unselectedLabelColor: Colors.white,
+                      indicatorSize: TabBarIndicatorSize.label,
+                      tabs: [
+                        Tab(
+                          text: "热门",
+                        ),
+                        Tab(
+                          text: "推荐",
+                        )
+                      ]),
+                )
+              ],
+            ),
           ),
           body: TabBarView(
             children: [
