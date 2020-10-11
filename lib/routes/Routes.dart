@@ -10,20 +10,27 @@ import 'package:flutter_info/learn/statefull/pages/user/Login.dart';
 import 'package:flutter_info/learn/statefull/pages/user/RegisterFirst.dart';
 import 'package:flutter_info/learn/statefull/pages/user/RegisterSecond.dart';
 import 'package:flutter_info/learn/statefull/pages/user/RegisterThird.dart';
+import 'package:flutter_info/learn/statefull/pages/user/User.dart';
 
 //统一的路由管理
 final routers = {
   '/': (context) => TabWidget(),
+  //底部状态栏
   '/form': (context, {arguments}) => FormPage(arguments: arguments),
   '/search': (context) => SearchPage(),
   '/product': (context) => ProductPage(),
   '/product_detail': (context, {arguments}) => ProductDetail(arguments),
+  //设置页面
   '/login': (context) => LoginPage(),
   '/registerFirst': (context) => RegisterFirstPage(),
   '/registerSecond': (context) => RegisterSecondPage(),
   '/registerThird': (context) => RegisterThirdPage(),
+  //appbar
   '/appbarDemo': (context) => AppBarDemoPage(),
+  //tab
   '/tabBarController': (context) => TabBarControllerPage(),
+  //侧边栏
+  '/user': (context) => UserPage()
 };
 
 //统一的路由传参跳转处理

@@ -99,6 +99,10 @@ class _TabState extends State<TabWidget> {
                 leading: CircleAvatar(
                   child: Icon(Icons.people),
                 ),
+                onTap: () {
+                  Navigator.of(context).pop(); //隐藏侧边栏
+                  Navigator.of(context).pushNamed("/user");
+                },
               ),
               Divider(),
               ListTile(
