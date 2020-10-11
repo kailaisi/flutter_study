@@ -6,10 +6,11 @@ import 'package:flutter_info/learn/statefull/pages/tabs/Setting.dart';
 
 //底部的导航栏
 class TabWidget extends StatefulWidget {
-  TabWidget({Key key}) : super(key: key);
+  final index;
+  TabWidget({this.index = 0});
 
   @override
-  _TabState createState() => _TabState();
+  _TabState createState() => _TabState(index);
 }
 
 class _TabState extends State<TabWidget> {
@@ -20,6 +21,8 @@ class _TabState extends State<TabWidget> {
     ControlPage(),
     SettingPage(),
   ];
+
+  _TabState(this._current);
 
   @override
   Widget build(BuildContext context) {
@@ -32,9 +35,6 @@ class _TabState extends State<TabWidget> {
         currentIndex: _current,
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "首页"),
-          BottomNavigationBarItem(icon: Icon(Icons.equalizer), label: "设备"),
-          BottomNavigationBarItem(icon: Icon(Icons.category), label: "群控"),
-          BottomNavigationBarItem(icon: Icon(Icons.settings), label: "设置"),
           BottomNavigationBarItem(icon: Icon(Icons.equalizer), label: "设备"),
           BottomNavigationBarItem(icon: Icon(Icons.category), label: "群控"),
           BottomNavigationBarItem(icon: Icon(Icons.settings), label: "设置"),

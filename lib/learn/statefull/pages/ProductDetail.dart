@@ -20,7 +20,7 @@ class _ProductDetailState extends State<ProductDetail> {
       appBar: AppBar(
         title: Text("商品详情页面"),
       ),
-      body: Text("我是商品详情页面"),
+      body: Text("我是商品详情页面，商品id是${arguments["id"]}"),
     );
   }
 }

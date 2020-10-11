@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class ControlPage extends StatefulWidget {
-  ControlPage({Key key}) : super(key: key);
+class AppBarDemoPage extends StatefulWidget {
+  AppBarDemoPage({Key key}) : super(key: key);
 
   @override
-  _ControlPageState createState() => _ControlPageState();
+  _AppBarDemoPageState createState() => _AppBarDemoPageState();
 }
 
-class _ControlPageState extends State<ControlPage> {
+class _AppBarDemoPageState extends State<AppBarDemoPage> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(

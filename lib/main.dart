@@ -20,6 +20,10 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(initialRoute: "/", onGenerateRoute: onGenerateRoute);
+    return MaterialApp(
+      initialRoute: "/appbarDemo",
+      onGenerateRoute: onGenerateRoute,
+      debugShowCheckedModeBanner: false,
+    );
   }
 }
