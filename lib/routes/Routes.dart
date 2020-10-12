@@ -1,8 +1,10 @@
 import 'package:flutter_info/learn/statefull/pages/AppBarDemo.dart';
 import 'package:flutter_info/learn/statefull/pages/BottomBar.dart';
 import 'package:flutter_info/learn/statefull/pages/From.dart';
+import 'package:flutter_info/learn/statefull/pages/ListPage.dart';
 import 'package:flutter_info/learn/statefull/pages/TabBarController.dart';
 import 'package:flutter_info/learn/statefull/pages/other/Button.dart';
+import 'package:flutter_info/learn/statefull/pages/second/CheckBoxDemo.dart';
 import 'package:flutter_info/learn/statefull/pages/second/Product.dart';
 import 'package:flutter_info/learn/statefull/pages/second/ProductDetail.dart';
 import 'package:flutter_info/learn/statefull/pages/second/Search.dart';
@@ -18,9 +20,11 @@ final routers = {
   '/': (context) => TabWidget(),
   //底部状态栏
   '/form': (context, {arguments}) => FormPage(arguments: arguments),
+  '/listpage': (context, {arguments}) => ListPage(arguments: arguments),
   '/search': (context) => SearchPage(),
   '/product': (context) => ProductPage(),
   '/product_detail': (context, {arguments}) => ProductDetail(arguments),
+  '/checkbox': (context) => CheckBoxPage(),
   //设置页面
   '/login': (context) => LoginPage(),
   '/registerFirst': (context) => RegisterFirstPage(),

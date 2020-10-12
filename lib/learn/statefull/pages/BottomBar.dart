@@ -20,6 +20,8 @@ class _TabState extends State<TabWidget> {
     HomePage(),
     ControlPage(),
     SettingPage(),
+    SettingPage(),
+    SettingPage(),
   ];
 
   _TabState(this._current);
@@ -31,19 +33,19 @@ class _TabState extends State<TabWidget> {
           title: Text('Flutter Demo'),
         ),
         floatingActionButton: Container(
-          width: 60,
-          height: 60,
+          width: 50,
+          height: 50,
           padding: EdgeInsets.all(8),
-          margin: EdgeInsets.only(top: 5),
+          margin: EdgeInsets.only(top: 15),
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(34), color: Colors.white),
+              borderRadius: BorderRadius.circular(32), color: Colors.white),
           child: FloatingActionButton(
             onPressed: () {
               setState(() {
-                this._current = 1;
+                this._current = 2;
               });
             },
-            backgroundColor: this._current == 1 ? Colors.red : Colors.blue,
+            backgroundColor: this._current == 2 ? Colors.red : Colors.blue,
             child: Icon(Icons.add),
           ),
         ),
@@ -53,7 +55,9 @@ class _TabState extends State<TabWidget> {
           currentIndex: _current,
           items: [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: "首页"),
+            BottomNavigationBarItem(icon: Icon(Icons.message), label: "消息"),
             BottomNavigationBarItem(icon: Icon(Icons.equalizer), label: "分类"),
+            BottomNavigationBarItem(icon: Icon(Icons.share), label: "分享"),
             BottomNavigationBarItem(icon: Icon(Icons.settings), label: "设置"),
           ],
           backgroundColor: Colors.grey[50],

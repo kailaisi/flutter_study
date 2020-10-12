@@ -43,10 +43,16 @@ class _SettingPageState extends State<SettingPage> {
           ),
           RaisedButton(
             onPressed: () {
-              Navigator.pushNamed(context, '/form',
+              Navigator.pushNamed(context, '/listpage',
                   arguments: {"title": "我是路由命名跳转"});
             },
-            child: Text("命名路由跳转"),
+            child: Text("命名路由跳转ListView"),
+          ),
+          RaisedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/checkbox');
+            },
+            child: Text("单选框"),
           ),
         ]);
   }

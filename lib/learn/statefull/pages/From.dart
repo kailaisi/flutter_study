@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_info/res/listData.dart';
 
 //表单页面
 class FormPage extends StatefulWidget {
@@ -11,8 +10,16 @@ class FormPage extends StatefulWidget {
 }
 
 class _FormPageState extends State<FormPage> {
+  var _userName = new TextEditingController(); //初始化进行复制
+  var _password;
   final arguments;
   _FormPageState(this.arguments);
+
+  @override
+  void initState() {
+    super.initState();
+    _userName.text = "初始值";
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,22 +27,79 @@ class _FormPageState extends State<FormPage> {
       appBar: AppBar(
         title: Text(arguments["title"]),
       ),
-      body: ListView(
-          children: listData.map((e) {
-        return ListTile(
-          title: Text(e["name"]),
-          subtitle: Text(e["id"]),
-          leading: CircleAvatar(
-            backgroundImage: NetworkImage(
-                "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3874200651,1404071533&fm=26&gp=0.jpg"),
-          ),
-        );
-      }).toList()),
+      body: Padding(
+          padding: EdgeInsets.all(30),
+          child: Column(
+            children: [
+              TextField(
+                controller: this._userName,
+                onChanged: (value) {
+                  _userName.text = value;
+                },
+                decoration: InputDecoration(hintText: "输入用户名"),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              TextField(
+                decoration: InputDecoration(hintText: "输入密码"),
+                onChanged: (value) {
+                  _password = value;
+                },
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Container(
+                width: double.infinity,
+                child: RaisedButton(
+                  child: Text("登录"),
+                  onPressed: () {
+                    print(this._userName.text);
+                    print(this._password);
+                  },
+                  color: Colors.blue,
+                  textColor: Colors.white,
+                ),
+              )
+            ],
+          )),
+      //  TextDemo()),
       floatingActionButton: FloatingActionButton(
         child: Text("更多"),
         onPressed: () {
           Navigator.of(context).pop();
         },
+      ),
+    );
+  }
+}
+
+// 各种表单样式
+class TextDemo extends StatelessWidget {
+  const TextDemo({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Column(
+        children: [
+          TextField(),
+          SizedBox(height: 10),
+          TextField(
+            decoration: InputDecoration(
+                hintText: "请输入搜索内容", border: OutlineInputBorder()),
+          ),
+          SizedBox(height: 10),
+          TextField(
+            obscureText: true,
+            decoration: InputDecoration(
+              icon: Icon(Icons.people),
+              border: OutlineInputBorder(),
+              labelText: "用户名",
+            ),
+          )
+        ],
       ),
     );
   }
