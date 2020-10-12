@@ -2,6 +2,7 @@ import 'package:flutter_info/learn/statefull/pages/AppBarDemo.dart';
 import 'package:flutter_info/learn/statefull/pages/BottomBar.dart';
 import 'package:flutter_info/learn/statefull/pages/From.dart';
 import 'package:flutter_info/learn/statefull/pages/TabBarController.dart';
+import 'package:flutter_info/learn/statefull/pages/other/Button.dart';
 import 'package:flutter_info/learn/statefull/pages/second/Product.dart';
 import 'package:flutter_info/learn/statefull/pages/second/ProductDetail.dart';
 import 'package:flutter_info/learn/statefull/pages/second/Search.dart';
@@ -30,7 +31,8 @@ final routers = {
   //tab
   '/tabBarController': (context) => TabBarControllerPage(),
   //侧边栏
-  '/user': (context) => UserPage()
+  '/user': (context) => UserPage(),
+  '/buttonPage': (context) => ButtonPage(),
 };
 
 //统一的路由传参跳转处理

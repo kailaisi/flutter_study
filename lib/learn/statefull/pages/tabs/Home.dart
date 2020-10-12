@@ -50,6 +50,15 @@ class _HomePageState extends State<HomePage> {
             },
             child: Text("Tab自定义顶部Tab模块"),
           ),
+          SizedBox(
+            height: 10,
+          ),
+          RaisedButton(
+            child: Text("按钮演示页面"),
+            onPressed: () {
+              Navigator.pushNamed(context, '/buttonPage');
+            },
+          ),
         ]);
   }
 }
