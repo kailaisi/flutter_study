@@ -15,20 +15,24 @@ class _SettingPageState extends State<SettingPage> {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          RaisedButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/registerFirst');
-            },
-            child: Text("注册"),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          RaisedButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/login');
-            },
-            child: Text("登录"),
+          Row(
+            children: [
+              RaisedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/registerFirst');
+                },
+                child: Text("注册"),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              RaisedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/login');
+                },
+                child: Text("登录"),
+              ),
+            ],
           ),
           RaisedButton(
             onPressed: () {
@@ -48,11 +52,27 @@ class _SettingPageState extends State<SettingPage> {
             },
             child: Text("命名路由跳转ListView"),
           ),
+          Row(
+            children: [
+              RaisedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/checkbox');
+                },
+                child: Text("选择框"),
+              ),
+              RaisedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/radio');
+                },
+                child: Text("单选框"),
+              ),
+            ],
+          ),
           RaisedButton(
             onPressed: () {
-              Navigator.pushNamed(context, '/checkbox');
+              Navigator.pushNamed(context, '/datepick');
             },
-            child: Text("单选框"),
+            child: Text("时间选择器"),
           ),
         ]);
   }
