@@ -68,12 +68,28 @@ class _SettingPageState extends State<SettingPage> {
               ),
             ],
           ),
-          RaisedButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/datepick');
-            },
-            child: Text("时间选择器"),
-          ),
+          Row(
+            children: [
+              RaisedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/datepick');
+                },
+                child: Text("时间选择器"),
+              ),
+              RaisedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/banner');
+                },
+                child: Text("轮播图"),
+              ),
+              RaisedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/dialog');
+                },
+                child: Text("Dialog"),
+              ),
+            ],
+          )
         ]);
   }
 }

@@ -5,6 +5,8 @@ import 'package:flutter_info/learn/statefull/pages/ListPage.dart';
 import 'package:flutter_info/learn/statefull/pages/TabBarController.dart';
 import 'package:flutter_info/learn/statefull/pages/other/Button.dart';
 import 'package:flutter_info/learn/statefull/pages/other/DateTimePickPage.dart';
+import 'package:flutter_info/learn/statefull/pages/other/DialogDemo.dart';
+import 'package:flutter_info/learn/statefull/pages/other/SwiperDemo.dart';
 import 'package:flutter_info/learn/statefull/pages/second/CheckBoxDemo.dart';
 import 'package:flutter_info/learn/statefull/pages/second/Product.dart';
 import 'package:flutter_info/learn/statefull/pages/second/ProductDetail.dart';
@@ -29,6 +31,8 @@ final routers = {
   '/checkbox': (context) => CheckBoxPage(),
   '/radio': (context) => RadioBoxPage(),
   '/datepick': (context) => DateTimePickPubPage(),
+  '/banner': (context) => SwiperPage(),
+  '/dialog': (context) => DialogPage(),
   //设置页面
   '/login': (context) => LoginPage(),
   '/registerFirst': (context) => RegisterFirstPage(),
