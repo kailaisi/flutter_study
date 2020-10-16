@@ -21,7 +21,9 @@ class _SettingPageState extends State<SettingPage> {
                 onPressed: () {
                   Navigator.pushNamed(context, '/registerFirst');
                 },
-                child: Text("注册"),
+                child: Icon(
+                  Icons.home,
+                ),
               ),
               SizedBox(
                 height: 10,
